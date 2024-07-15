@@ -1,0 +1,150 @@
+@media(max-width:950px) {
+
+    /*.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .imgslider {
+        width: 100%;
+        height: 500px;
+    }*/
+
+
+}
+
+@media(max-width:850px) {
+    /*.checkbtn {
+        display: block;
+
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 1s;
+    }
+
+    nav ul li {
+        display: block;
+
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+
+    }
+
+    nav a:hover,
+    nav a.active {
+        background: none;
+        color: #04497d;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .menubar {
+        display: block;
+
+    }
+
+
+    #check:checked~ul {
+        left: 0;
+        transition: all 1s;
+        position: absolute;
+        z-index: 999;
+
+    }*/
+
+
+
+    /*-----img slider------
+
+    .imgslider {
+        width: 100%;
+        height: 350px;
+
+    }
+
+    .imgslider img {
+        z-index: -999;
+    }*/
+
+    /*----------------Contact Us page-----------------------------------------------*/
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /*------------About us page-----------------------------------*/
+
+    .abt-heading {
+        padding: 0px 20px;
+    }
+
+    .abt-heading h1 {
+        font-size: 36px;
+    }
+
+    .abt-heading p {
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+
+    .abt-container {
+        padding: 0px;
+    }
+
+    .abt-about {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .abt-img {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .abt-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .abt-content .read-more {
+        font-size: 16px;
+    }
+
+
+    /*-------Footer Sections--------*/
+
+    #footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    #footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+}
+
+@media (max-width: 425px) {}

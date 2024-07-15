@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="Mediaquirey.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="formating.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!---Header design-->
+    <header class="nev-header">
+
+        <section class="navigation-menu">
+            <nav class="navbar">
+                <label class="logo">Pet Adoption</label>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Booking</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+
+                <div class="nav-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </nav>
+            <script>
+                const nav_icon = document.querySelector(".nav-icon");
+                const nav_menu = document.querySelector(".nav-menu");
+
+                nav_icon.addEventListener("click", () => {
+                    nav_icon.classList.toggle("active");
+                    nav_menu.classList.toggle("active");
+
+
+                })
+
+                document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+                    nav_icon.classList.remove("active");
+                    nav_menu.classList.remove("active");
+                }))
+            </script>
+
+        </section>
+
+    </header>
+
+    <!---------------------------------------------------Services page --------------------------------------------------------------------------------------------------------------->
+
+    <section class="services">
+        <div class="services-container">
+
+            <header>Services form</header>
+            <form action="#" id="services-form" class="service-form">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" name="" id="username" placeholder="Enter full name" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="">Email Address</label>
+                    <input type="email" name="" id="emailid" placeholder="Enter Email Address" required>
+                </div>
+
+                <div class="service-column">
+                    <div class="input-box">
+                        <label for="">Phone Number</label>
+                        <input type="tel" name="" id="Phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="XXX-XXX-XXXX" required>
+
+                    </div>
+
+                    <div class="input-box">
+                        <label for="">Appointment Date </label>
+                        <input type="date" name="" id="date" placeholder="Enter Appoint Date" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="">Appointment Time </label>
+                        <input type="time" name="" id="time" placeholder="Enter Appoint time" required>
+                    </div>
+                </div>
+
+
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-service1" name="gender">
+                            <label for="check-service1">Service 1</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-service2" name="gender">
+                            <label for="check-service2">Service 2</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-service3" name="gender">
+                            <label for="check-service3">Service 3</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-box address">
+                    <label for="">Address </label>
+                    <input type="text" name="" id="" placeholder="Enter street address" required>
+                    <input type="text" name="" id="" placeholder="Enter street address line 2">
+                    <div class="service-column">
+                        <input name="section" list="script" placeholder="Select Country">
+                        <datalist id="script">
+                            <option value="United state"></option>
+                            <option value="india"></option>
+                            <option value="Nepal"></option>
+                            <option value="Africa"></option>
+                            <option value="United Kingdom"></option>
+                        </datalist>
+                    </div>
+
+                    <input type="text" name="" id="" placeholder="Enter city" required>
+                    <input type="text" name="" id="" placeholder="Enter state" required>
+                    <input type="text" name="" id="" placeholder="Enter ZIP code" required>
+                </div>
+
+                <div class="check-box">
+                    <input type="checkbox" id="Acknolegment">
+                    <label for="Acknolegment">I accept all terms and conditon </label>
+                </div>
+
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+                <div id="alert-container">
+                    <div id="msd">Thanks for slecting Us
+                        <p id="min">10</p>:<P id="sec">00</P>
+                        <h5 id="show-date">Date</h5>
+                        <h6 id="show-time">Time</h6>
+                    </div>
+                    <button id="ok" onclick="hide()">OK</button>
+
+                </div>
+
+
+            </form>
+            <script>
+                var form = document.getElementById("services-form");
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault()
+
+                    var username = document.getElementById('username').value;
+                    var emailid = document.getElementById('emailid').value;
+                    var Phone_number = document.getElementById('Phone-number').value;
+                    var time = document.getElementById('time').value;
+                    var date = document.getElementById('date').value;
+
+                    var show_date = document.getElementById('show-date');
+                    var show_time = document.getElementById('show-time');
+                    let today = new Date();
+
+                    let for_month = today.getMonth();
+                    let for_date = today.getDate();
+                    let for_year = today.getFullYear();
+
+                    let current_date = for_month + "/" + for_date + "/" + for_year;
+                    show_date.innerHTML = current_date;
+
+                    let for_hour = today.getHours();
+                    let for_min = today.getMinutes();
+
+
+                    let current_time = for_hour + ':' + for_min;
+                    show_time.innerHTML = current_time;
+
+                    console.log(String(current_time))
+
+
+
+                    console.log("please wait");
+
+
+
+
+
+
+
+
+
+
+                    setInterval(() => {
+                        console.log(username)
+                        console.log("Appoint ment is submitted");
+                    }, 4000);
+
+                    var alert = document.getElementById('alert-container')
+                    alert.style.display = "block"
+
+                    function hide() {
+                        var alert = document.getElementById('alert-container')
+                        alert.style.display = "none"
+
+                    }
+                    const starting = 10;
+                    let timer = starting * 60;
+                    const countdown = document.getElementById('countdown-time');
+
+                    setInterval(updatecountdown, 1000);
+
+                    function updatecountdown() {
+                        const minutes = Math.floor(timer / 60);
+                        let seconds = timer % 60;
+                        seconds = seconds < 10 ? '0' + seconds : seconds;
+                        document.getElementById("min").innerHTML = minutes;
+                        document.getElementById("sec").innerHTML = seconds;
+                        console.log("timer is running")
+                        timer--;
+                    }
+
+
+
+
+
+
+
+
+
+                })
+
+
+
+
+
+
+
+
+                function ShowAlert() {
+                    if (counter != 0) {
+                        alert(counter);
+                        counter = counter - 1;
+                    } else {
+                        clearInterval(timerId);
+                    }
+                }
+            </script>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-----------footer section-->
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contact">
+                <h1>Logo</h1>
+                <p>It's all about your dreams</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link">FB</a>
+                    <a href="#" class="footer-link">Wapp</a>
+                    <a href="#" class="footer-link">Ins</a>
+                </div>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li><a href="#" class="footer-link">Feedback</a></li>
+                <li><a href="#" class="footer-link">Services</a></li>
+                <li><a href="#" class="footer-link">Adoption</a></li>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Product</h3>
+                </li>
+                <li><a href="#" class="footer-link">App</a></li>
+                <li><a href="#" class="footer-link">Adventure</a></li>
+                <li><a href="#" class="footer-link">Cloud</a></li>
+            </div>
+
+            <div id="footer-subcribe">
+                <h3>Subscribe</h3>
+                <p>Enter your email to get notify about our news</p>
+
+                <div id="input-group">
+                    <input type="email" name="" id="email" placeholder="Your Email!">
+                    <button></button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div id="footer_copyright">
+            &#169;
+            2024 all right reserved
+        </div>
+    </footer>
+
+</body>
+
+</html>

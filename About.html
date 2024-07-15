@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="Mediaquirey.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="formating.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!---Header design-->
+    <header class="nev-header">
+
+        <section class="navigation-menu">
+            <nav class="navbar">
+                <label class="logo">Pet Adoption</label>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Booking</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+
+                <div class="nav-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </nav>
+            <script>
+                const nav_icon = document.querySelector(".nav-icon");
+                const nav_menu = document.querySelector(".nav-menu");
+
+                nav_icon.addEventListener("click", () => {
+                    nav_icon.classList.toggle("active");
+                    nav_menu.classList.toggle("active");
+
+
+                })
+
+                document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+                    nav_icon.classList.remove("active");
+                    nav_menu.classList.remove("active");
+                }))
+            </script>
+
+        </section>
+
+    </header>
+    <section>
+
+        <div class="abt-heading">
+            <h1>About Us</h1>
+            <p>Welcome to Adopt a Pet. We're all about getting homeless pets into homes.</p>
+        </div>
+        <div class="abt-container">
+            <section class="abt-about">
+                <div class="abt-img"><img src="./Pet_pictures/aboutus-img.jpg" alt=""></div>
+                <div class="abt-content">
+                    <h2>We're here for you.</h2>
+                    <p>Our collective mission is to connect prospective pet parents with the pet that's right for them.
+                        But we don't stop there - through our sister brands at Kinship, we also provide useful
+                        information
+                        and a wealth of resources to help adopters succeed on their new pet parent journey. Check out
+                        The
+                        Wildest for articles on everything to help you ace it for your animal - from pet parent to-dos
+                        to
+                        product reviews to training tips. Head on over to GoodFriend to easily find and book
+                        veterinarians,
+                        trainers, and groomers near you!</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </section>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contact">
+                <h1>Logo</h1>
+                <p>It's all about your dreams</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link">FB</a>
+                    <a href="#" class="footer-link">Wapp</a>
+                    <a href="#" class="footer-link">Ins</a>
+                </div>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li><a href="#" class="footer-link">Feedback</a></li>
+                <li><a href="#" class="footer-link">Services</a></li>
+                <li><a href="#" class="footer-link">Adoption</a></li>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Product</h3>
+                </li>
+                <li><a href="#" class="footer-link">App</a></li>
+                <li><a href="#" class="footer-link">Adventure</a></li>
+                <li><a href="#" class="footer-link">Cloud</a></li>
+            </div>
+
+            <div id="footer-subcribe">
+                <h3>Subscribe</h3>
+                <p>Enter your email to get notify about our news</p>
+
+                <div id="input-group">
+                    <input type="email" name="" id="email" placeholder="Your Email!">
+                    <button></button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div id="footer_copyright">
+            &#169;
+            2024 all right reserved
+        </div>
+    </footer>
+</body>
+
+</html>

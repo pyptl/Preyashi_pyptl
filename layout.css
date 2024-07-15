@@ -1,0 +1,161 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+.navbar{
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.bar{
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/*------------------------------service form design----------------------------------------------------------*/
+
+.service-form .gender-box{
+    margin-top: 20px;
+}
+
+.gender-box h3{
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400px;
+    margin-bottom: 8px;
+}
+.service-form :where(.gender-option, .gender){
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    
+}
+
+.service-form .gender{
+    column-gap: 5px;
+} 
+
+.service-form:where(.gender input, .gender label){
+    cursor: pointer;
+}
+
+.address :where(input, .select-box){
+    margin-top: px;
+}
+
+.select-box select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+
+}
+
+.check-box{
+    display: inline-flex;
+    padding: 15px;
+    flex-basis: auto;
+}
+.check-box label{
+    width: 450px;
+}
+
+
+@media(max-width:850px) {
+    /*----------------Contact Us page-----------------------------------------------*/
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /*---------------------------service page-----------------------------------------------*/
+
+    .service-form .service-column{
+        flex-wrap: wrap;
+    }
+
+    
+
+    /*------------About us page-----------------------------------*/
+
+    .abt-heading {
+        padding: 0px 20px;
+    }
+
+    .abt-heading h1 {
+        font-size: 36px;
+    }
+
+    .abt-heading p {
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+
+    .abt-container {
+        padding: 0px;
+    }
+
+    .abt-about {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .abt-img {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .abt-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .abt-content .read-more {
+        font-size: 16px;
+    }
+
+
+    /*-------Footer Sections--------*/
+
+    #footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    #footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+}
+
+

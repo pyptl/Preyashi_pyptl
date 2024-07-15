@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="Mediaquirey.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="formating.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!---Header design-->
+    <header class="nev-header">
+
+        <section class="navigation-menu">
+            <nav class="navbar">
+                <label class="logo">Pet Adoption</label>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Booking</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+
+                <div class="nav-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </nav>
+            <script>
+                const nav_icon = document.querySelector(".nav-icon");
+                const nav_menu = document.querySelector(".nav-menu");
+
+                nav_icon.addEventListener("click", () => {
+                    nav_icon.classList.toggle("active");
+                    nav_menu.classList.toggle("active");
+
+
+                })
+
+                document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+                    nav_icon.classList.remove("active");
+                    nav_menu.classList.remove("active");
+                }))
+            </script>
+
+        </section>
+
+    </header>
+
+    <!---------------------------------------- Contact Us page---------------------------------------------------->
+    <section class="contact-section" id="">
+        <div class="contact-container">
+            <h2>Contact us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form action="">
+                        <div class="form-group"><input type="text" name="name" placeholder="Your name"></div>
+                        <div class="form-group"><input type="text" name="email" placeholder="Your email"></div>
+                        <div class="form-group"><textarea name="message" placeholder="Enter Your message"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+
+                    </form>
+                </div>
+
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>+1 123-456-7890</p>
+                    <p>info@example.com</p>
+                    <p>123 street, city,country</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contact">
+                <h1>Logo</h1>
+                <p>It's all about your dreams</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link">FB</a>
+                    <a href="#" class="footer-link">Wapp</a>
+                    <a href="#" class="footer-link">Ins</a>
+                </div>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li><a href="#" class="footer-link">Feedback</a></li>
+                <li><a href="#" class="footer-link">Services</a></li>
+                <li><a href="#" class="footer-link">Adoption</a></li>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Product</h3>
+                </li>
+                <li><a href="#" class="footer-link">App</a></li>
+                <li><a href="#" class="footer-link">Adventure</a></li>
+                <li><a href="#" class="footer-link">Cloud</a></li>
+            </div>
+
+            <div id="footer-subcribe">
+                <h3>Subscribe</h3>
+                <p>Enter your email to get notify about our news</p>
+
+                <div id="input-group">
+                    <input type="email" name="" id="email" placeholder="Your Email!">
+                    <button></button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div id="footer_copyright">
+            &#169;
+            2024 all right reserved
+        </div>
+    </footer>
+</body>
+
+</html>

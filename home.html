@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="Mediaquirey.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="formating.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!---Header design-->
+    <header class="nev-header">
+
+        <section class="navigation-menu">
+            <nav class="navbar">
+                <label class="logo">Pet Adoption</label>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Booking</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+
+                <div class="nav-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </nav>
+            <script>
+                const nav_icon = document.querySelector(".nav-icon");
+                const nav_menu = document.querySelector(".nav-menu");
+
+                nav_icon.addEventListener("click", () => {
+                    nav_icon.classList.toggle("active");
+                    nav_menu.classList.toggle("active");
+
+
+                })
+
+                document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+                    nav_icon.classList.remove("active");
+                    nav_menu.classList.remove("active");
+                }))
+            </script>
+
+        </section>
+
+    </header>
+
+    <!----------------------------------------------- image slider---------------------------------------------------------------------------->
+    <!----<div class="imgslider">
+        <figure>
+            <div class="slide">
+                <h1>img1</h1>
+                <img src="./Pet_pictures/img (1).jpg" alt="">
+            </div>
+            <div class="slide">
+                <h1>img2</h1>
+                <img src="./Pet_pictures/img (2).jpg" alt="">
+            </div>
+            <div class="slide">
+                <h1>img3</h1>
+                <img src="./Pet_pictures/img (3).jpg" alt="">
+            </div>
+            <div class="slide">
+                <h1>img4</h1>
+                <img src="./Pet_pictures/img (4).jpg" alt="">
+            </div>
+            <div class="slide">
+                <h1>img5</h1>
+                <img src="./Pet_pictures/img (5).jpg" alt="">
+            </div>
+        </figure>
+    </div>
+-------->
+    <section>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="./Pet_pictures/img (1).jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./Pet_pictures/img (3).jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./Pet_pictures/img (2).jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./Pet_pictures/img (4).jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./Pet_pictures/img (5).jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+    </section>
+
+    <!-----------footer section-->
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contact">
+                <h1>Logo</h1>
+                <p>It's all about your dreams</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link">FB</a>
+                    <a href="#" class="footer-link">Wapp</a>
+                    <a href="#" class="footer-link">Ins</a>
+                </div>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li><a href="#" class="footer-link">Feedback</a></li>
+                <li><a href="#" class="footer-link">Services</a></li>
+                <li><a href="#" class="footer-link">Adoption</a></li>
+            </div>
+
+            <div class="footer-list">
+                <li>
+                    <h3>Product</h3>
+                </li>
+                <li><a href="#" class="footer-link">App</a></li>
+                <li><a href="#" class="footer-link">Adventure</a></li>
+                <li><a href="#" class="footer-link">Cloud</a></li>
+            </div>
+
+            <div id="footer-subcribe">
+                <h3>Subscribe</h3>
+                <p>Enter your email to get notify about our news</p>
+
+                <div id="input-group">
+                    <input type="email" name="" id="email" placeholder="Your Email!">
+                    <button></button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div id="footer_copyright">
+            &#169;
+            2024 all right reserved
+        </div>
+    </footer>
+
+</body>
+
+</html>
